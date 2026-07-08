@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="es-CL">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nutre Bienestar — Consulta de Nutrición Personalizada en Chile</title>
+  <meta name="description" content="Nutre Bienestar: nutrición personalizada en Chile. Planes de alimentación adaptados a tu estilo de vida, con nutricionistas certificadas que te acompañan en cada paso hacia una vida más saludable.">
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="Nutre Bienestar">
+  <meta property="og:title" content="Nutre Bienestar — Nutrición Personalizada en Chile">
+  <meta property="og:description" content="Planes de alimentación a tu medida, con acompañamiento profesional. Agenda tu primera consulta.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_CL">
+
+  <!-- Favicon SVG inline -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%238FA888'/><text x='50%25' y='55%25' dominant-baseline='central' text-anchor='middle' font-family='sans-serif' font-weight='bold' font-size='18' fill='white'>N</text></svg>" type="image/svg+xml">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;600;700&family=Nunito+Sans:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap 5.3 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YcnS/3PnMnWab3QghNFtg0EvG/lEhR6gJCfB" crossorigin="anonymous">
+
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- ==================== TOP BAR ==================== -->
+  <div class="topbar" id="topbar">
+    <div class="container">
+      <div class="d-flex justify-content-between align-items-center flex-wrap">
+        <div>
+          <i class="bi bi-geo-alt-fill"></i> Santiago, Viña del Mar y Concepción · Atención online en todo Chile
+        </div>
+        <div>
+          <i class="bi bi-telephone-fill"></i> <a href="tel:+56912345678">+56 9 1234 5678</a>
+          <span class="mx-2">|</span>
+          <i class="bi bi-envelope-fill"></i> <a href="mailto:hola@nutrebienestar.cl">hola@nutrebienestar.cl</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== NAVBAR ==================== -->
+  <nav class="navbar navbar-expand-lg sticky-top" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand" href="#" aria-label="Nutre Bienestar — Inicio">
+        <span class="brand-icon"><i class="bi bi-leaf"></i></span>
+        Nutre Bienestar
+      </a>
+      <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-controls="navMenu" aria-expanded="false" aria-label="Abrir menú de navegación">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav ms-auto align-items-lg-center">
+          <li class="nav-item"><a class="nav-link" href="#beneficios">Beneficios</a></li>
+          <li class="nav-item"><a class="nav-link" href="#planes">Planes</a></li>
+          <li class="nav-item"><a class="nav-link" href="#como-funciona">Cómo funciona</a></li>
+          <li class="nav-item"><a class="nav-link" href="#testimonios">Testimonios</a></li>
+          <li class="nav-item"><a class="nav-link" href="#faq">Preguntas</a></li>
+          <li class="nav-item ms-lg-2">
+            <a class="nav-link btn-cta-nav" href="#cta">Agendar consulta</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ==================== HERO ==================== -->
+  <section class="hero" id="hero">
+    <div class="hero-video-wrapper">
+      <video
+        class="hero-video"
+        id="heroVideo"
+        autoplay
+        muted
+        loop
+        playsinline
+        preload="auto"
+        poster="https://assets.mixkit.co/videos/43925/43925-thumb-720-0.jpg"
+        aria-label="Video de preparación de alimentos saludables con frutas frescas"
+      >
+        <source src="https://assets.mixkit.co/videos/43925/43925-720.mp4" type="video/mp4">
+        Tu navegador no soporta el elemento de video.
+      </video>
+    </div>
+    <div class="hero-overlay"></div>
+
+    <div class="container hero-content">
+      <div class="row">
+        <div class="col-lg-7">
+          <h1>
+            Tu camino hacia una<br>
+            <span class="text-highlight">alimentación consciente</span><br>
+            comienza aquí
+          </h1>
+          <p class="lead">
+            Nutrición personalizada y cercana, con profesionales que
+            entienden tu ritmo de vida. Sin dietas extremas, sin culpa
+            — solo bienestar real y duradero.
+          </p>
+          <div class="btn-group-hero">
+            <a href="#cta" class="btn btn-organic btn-organic-primary">
+              Agendar mi consulta gratis
+              <span class="bounce-icon"><i class="bi bi-arrow-right-circle-fill"></i></span>
+            </a>
+            <a href="#planes" class="btn btn-organic btn-organic-outline">
+              Ver planes
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <button
+      class="hero-video-toggle"
+      id="videoToggle"
+      type="button"
+      aria-label="Pausar o reproducir el video de fondo"
+      title="Pausar / Reproducir video"
+    >
+      <i class="bi bi-pause-fill" id="videoToggleIcon"></i>
+    </button>
+  </section>
+
+  <!-- ==================== TRUST BAR ==================== -->
+  <section class="trust-bar" id="trust" aria-label="Indicadores de confianza">
+    <div class="container">
+      <div class="row g-3 text-center">
+        <div class="col-6 col-md-3">
+          <div class="trust-item">
+            <i class="bi bi-people-fill"></i>
+            <span>+2.500 pacientes</span>
+          </div>
+        </div>
+        <div class="col-6 col-md-3">
+          <div class="trust-item">
+            <i class="bi bi-star-fill"></i>
+            <span>4.9 en Google</span>
+          </div>
+        </div>
+        <div class="col-6 col-md-3">
+          <div class="trust-item">
+            <i class="bi bi-patch-check-fill"></i>
+            <span>Nutricionistas tituladas</span>
+          </div>
+        </div>
+        <div class="col-6 col-md-3">
+          <div class="trust-item">
+            <i class="bi bi-camera-video-fill"></i>
+            <span>Consulta online o presencial</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== PAIN / PROBLEM ==================== -->
+  <section class="pain-section" id="problema" aria-labelledby="pain-heading">
+    <div class="container">
+      <div class="text-center mb-5 reveal">
+        <h2 class="section-title" id="pain-heading">¿Te suena familiar?</h2>
+        <p class="section-subtitle">
+          Si alguno de estos puntos te resuena, no estás solo/a. Le pasa a la mayoría
+          y tiene solución.
+        </p>
+      </div>
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-3 reveal">
+          <div class="pain-card">
+            <div class="pain-icon"><i class="bi bi-emoji-dizzy"></i></div>
+            <h3>Dietas que no funcionan</h3>
+            <p>Has probado mil dietas, pero siempre vuelves al punto de partida. Es agotador y frustrante.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3 reveal">
+          <div class="pain-card">
+            <div class="pain-icon"><i class="bi bi-clock-history"></i></div>
+            <h3>Falta de tiempo</h3>
+            <p>Entre la pega, la casa y la vida, cocinar sano parece un lujo que no te puedes dar.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3 reveal">
+          <div class="pain-card">
+            <div class="pain-icon"><i class="bi bi-question-circle"></i></div>
+            <h3>Información confusa</h3>
+            <p>Un día el café es bueno, al otro es malo. Tanta contradicción te deja sin saber qué comer.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3 reveal">
+          <div class="pain-card">
+            <div class="pain-icon"><i class="bi bi-battery-half"></i></div>
+            <h3>Cansancio constante</h3>
+            <p>Te levantas cansado/a y llegas arrastrándote al final del día. Tu energía ya no da para más.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== BENEFITS ==================== -->
+  <section class="benefits-section" id="beneficios" aria-labelledby="benefits-heading">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-6 mb-4 mb-lg-0 reveal">
+          <img
+            src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=640&q=80&auto=format"
+            alt="Mesa con bowls de alimentos saludables y coloridos: ensalada, frutas, granola y batidos verdes"
+            class="benefits-img"
+            loading="lazy"
+            width="640"
+            height="427"
+          >
+        </div>
+        <div class="col-lg-6 reveal">
+          <h2 class="section-title" id="benefits-heading">Lo que ganas con Nutre Bienestar</h2>
+          <p class="section-subtitle text-start" style="margin-left:0">
+            No es solo bajar de peso. Es recuperar tu energía, mejorar tu relación con la comida
+            y sentirte bien de verdad.
+          </p>
+
+          <div class="benefit-item">
+            <div class="benefit-icon"><i class="bi bi-clipboard2-pulse"></i></div>
+            <div>
+              <h3>Plan 100% personalizado</h3>
+              <p>Diseñado para tu cuerpo, tus gustos y tu rutina. Nada de menús genéricos que nadie sigue.</p>
+            </div>
+          </div>
+          <div class="benefit-item">
+            <div class="benefit-icon"><i class="bi bi-chat-heart"></i></div>
+            <div>
+              <h3>Acompañamiento real</h3>
+              <p>Tu nutricionista te acompaña por WhatsApp entre consultas. Tienes dudas, te responde.</p>
+            </div>
+          </div>
+          <div class="benefit-item">
+            <div class="benefit-icon"><i class="bi bi-lightning-charge"></i></div>
+            <div>
+              <h3>Más energía desde la semana 1</h3>
+              <p>El 87% de nuestros pacientes reporta mayor energía y mejor sueño en los primeros 7 días.</p>
+            </div>
+          </div>
+          <div class="benefit-item">
+            <div class="benefit-icon"><i class="bi bi-heart-pulse"></i></div>
+            <div>
+              <h3>Sin restricciones absurdas</h3>
+              <p>Comemos empanadas, asados y sopaipillas. Te enseñamos a disfrutar sin culpa.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== PLANS ==================== -->
+  <section class="plans-section" id="planes" aria-labelledby="plans-heading">
+    <div class="container">
+      <div class="text-center mb-5 reveal">
+        <h2 class="section-title" id="plans-heading">Elige tu plan de bienestar</h2>
+        <p class="section-subtitle">
+          Todos los planes incluyen evaluación nutricional completa y recetas
+          adaptadas a la cocina chilena.
+        </p>
+      </div>
+      <div class="row g-4 justify-content-center">
+        <!-- Plan Básico -->
+        <div class="col-md-6 col-lg-4 reveal">
+          <div class="plan-card">
+            <div class="plan-icon"><i class="bi bi-feather"></i></div>
+            <h3>Plan Esencial</h3>
+            <p class="text-muted">Perfecto para empezar tu cambio</p>
+            <div class="plan-price">$35.000 <small>CLP/mes</small></div>
+            <ul class="plan-features">
+              <li><i class="bi bi-check-circle-fill"></i> 1 consulta mensual (45 min)</li>
+              <li><i class="bi bi-check-circle-fill"></i> Plan alimentario personalizado</li>
+              <li><i class="bi bi-check-circle-fill"></i> Recetario digital (20 recetas)</li>
+              <li><i class="bi bi-check-circle-fill"></i> Control de medidas</li>
+              <li><i class="bi bi-check-circle-fill"></i> Acceso a guía de snacks saludables</li>
+            </ul>
+            <a href="#cta" class="btn btn-organic btn-organic-outline w-100">Comenzar</a>
+          </div>
+        </div>
+
+        <!-- Plan Estándar (Featured) -->
+        <div class="col-md-6 col-lg-4 reveal">
+          <div class="plan-card featured">
+            <span class="plan-badge">Más elegido</span>
+            <div class="plan-icon"><i class="bi bi-flower2"></i></div>
+            <h3>Plan Integral</h3>
+            <p class="text-muted">Acompañamiento continuo y resultados</p>
+            <div class="plan-price">$55.000 <small>CLP/mes</small></div>
+            <ul class="plan-features">
+              <li><i class="bi bi-check-circle-fill"></i> 2 consultas mensuales (45 min)</li>
+              <li><i class="bi bi-check-circle-fill"></i> Plan alimentario + ajustes semanales</li>
+              <li><i class="bi bi-check-circle-fill"></i> Soporte WhatsApp entre consultas</li>
+              <li><i class="bi bi-check-circle-fill"></i> Recetario extendido (50+ recetas)</li>
+              <li><i class="bi bi-check-circle-fill"></i> Análisis de composición corporal</li>
+              <li><i class="bi bi-check-circle-fill"></i> Lista de compras semanal</li>
+            </ul>
+            <a href="#cta" class="btn btn-organic btn-organic-primary w-100">
+              Elegir este plan
+              <span class="bounce-icon"><i class="bi bi-arrow-right-circle-fill"></i></span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Plan Premium -->
+        <div class="col-md-6 col-lg-4 reveal">
+          <div class="plan-card">
+            <div class="plan-icon"><i class="bi bi-gem"></i></div>
+            <h3>Plan Premium</h3>
+            <p class="text-muted">La experiencia completa de bienestar</p>
+            <div class="plan-price">$89.000 <small>CLP/mes</small></div>
+            <ul class="plan-features">
+              <li><i class="bi bi-check-circle-fill"></i> 4 consultas mensuales (60 min)</li>
+              <li><i class="bi bi-check-circle-fill"></i> Plan alimentario + meal prep semanal</li>
+              <li><i class="bi bi-check-circle-fill"></i> Soporte WhatsApp ilimitado</li>
+              <li><i class="bi bi-check-circle-fill"></i> Recetario premium (100+ recetas)</li>
+              <li><i class="bi bi-check-circle-fill"></i> Coaching de hábitos y mindful eating</li>
+              <li><i class="bi bi-check-circle-fill"></i> Sesión con psicóloga alimentaria</li>
+              <li><i class="bi bi-check-circle-fill"></i> Acceso a talleres grupales mensuales</li>
+            </ul>
+            <a href="#cta" class="btn btn-organic btn-organic-secondary w-100">Quiero el premium</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== HOW IT WORKS ==================== -->
+  <section class="howit-section" id="como-funciona" aria-labelledby="howit-heading">
+    <div class="container">
+      <div class="text-center mb-5 reveal">
+        <h2 class="section-title" id="howit-heading">¿Cómo funciona?</h2>
+        <p class="section-subtitle">
+          Tres pasos simples para empezar a sentirte mejor. Sin vueltas, sin letra chica.
+        </p>
+      </div>
+      <div class="row g-4">
+        <div class="col-md-4 reveal">
+          <div class="step-card">
+            <div class="step-number">1</div>
+            <h3>Agenda tu consulta</h3>
+            <p>Elige un horario que te acomode — presencial en nuestras sedes o por videollamada desde cualquier rincón de Chile.</p>
+          </div>
+        </div>
+        <div class="col-md-4 reveal">
+          <div class="step-card">
+            <div class="step-number">2</div>
+            <h3>Evaluación completa</h3>
+            <p>Conocemos tu historia, tus gustos, tu día a día. Hacemos mediciones y diseñamos un plan que realmente puedas seguir.</p>
+          </div>
+        </div>
+        <div class="col-md-4 reveal">
+          <div class="step-card">
+            <div class="step-number">3</div>
+            <h3>Acompañamiento continuo</h3>
+            <p>No te dejamos solo/a. Te acompañamos semana a semana, ajustando tu plan según cómo te vayas sintiendo.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== TESTIMONIALS ==================== -->
+  <section class="testimonials-section" id="testimonios" aria-labelledby="testimonials-heading">
+    <div class="container">
+      <div class="text-center mb-5 reveal">
+        <h2 class="section-title" id="testimonials-heading">Lo que dicen nuestros pacientes</h2>
+        <p class="section-subtitle">
+          Historias reales de personas que decidieron invertir en su bienestar.
+        </p>
+      </div>
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-4 reveal">
+          <div class="testimonial-card">
+            <div class="testimonial-stars">
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+            </div>
+            <blockquote>
+              «Llevaba años probando dietas y siempre rebotaba. En Nutre Bienestar entendieron
+              que mi problema no era falta de voluntad, sino falta de estructura. En 3 meses
+              bajé 8 kilos y lo más importante: no los recuperé.»
+            </blockquote>
+            <div class="testimonial-author">
+              <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=96&h=96&fit=crop&crop=face" alt="Foto de Camila Reyes, paciente satisfecha de Nutre Bienestar" class="testimonial-avatar" loading="lazy" width="48" height="48">
+              <div class="testimonial-author-info">
+                <strong>Camila Reyes</strong>
+                <span>32 años · Santiago</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 reveal">
+          <div class="testimonial-card">
+            <div class="testimonial-stars">
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+            </div>
+            <blockquote>
+              «Soy diabético tipo 2 y necesitaba un plan que se ajustara a mi realidad.
+              La nutricionista no solo me hizo un menú, sino que me enseñó a leer
+              etiquetas y a elegir mejor en el supermercado. Mi hemoglobina glicosilada
+              bajó de 8.1 a 6.4.»
+            </blockquote>
+            <div class="testimonial-author">
+              <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=96&h=96&fit=crop&crop=face" alt="Foto de Roberto Soto, paciente satisfecho de Nutre Bienestar" class="testimonial-avatar" loading="lazy" width="48" height="48">
+              <div class="testimonial-author-info">
+                <strong>Roberto Soto</strong>
+                <span>55 años · Viña del Mar</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 reveal">
+          <div class="testimonial-card">
+            <div class="testimonial-stars">
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+            </div>
+            <blockquote>
+              «Después de mi embarazo quería volver a sentirme bien conmigo misma,
+              pero sin dejar de comer rico. El plan que me hicieron incluía
+              sopaipillas y hasta un completo de vez en cuando. Eso es Chile,
+              poh. Y funciona.»
+            </blockquote>
+            <div class="testimonial-author">
+              <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=96&h=96&fit=crop&crop=face" alt="Foto de Valentina Muñoz, paciente satisfecha de Nutre Bienestar" class="testimonial-avatar" loading="lazy" width="48" height="48">
+              <div class="testimonial-author-info">
+                <strong>Valentina Muñoz</strong>
+                <span>28 años · Concepción</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== FAQ ==================== -->
+  <section class="faq-section" id="faq" aria-labelledby="faq-heading">
+    <div class="container">
+      <div class="text-center mb-5 reveal">
+        <h2 class="section-title" id="faq-heading">Preguntas frecuentes</h2>
+        <p class="section-subtitle">
+          Resolvemos tus dudas para que agendes con total tranquilidad.
+        </p>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-lg-8 reveal">
+          <div class="accordion" id="faqAccordion">
+
+            <div class="accordion-item">
+              <h3 class="accordion-header">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1" aria-expanded="true" aria-controls="faq1">
+                  ¿La primera consulta es realmente gratis?
+                </button>
+              </h3>
+              <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  Sí, tu primera consulta de 30 minutos es completamente gratuita y sin compromiso.
+                  Es una conversación para conocerte, entender tus objetivos y explicarte cómo
+                  trabajamos. Si te hace sentido, elegimos juntos el plan que más se ajuste a ti.
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h3 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2" aria-expanded="false" aria-controls="faq2">
+                  ¿Atienden solo en Santiago?
+                </button>
+              </h3>
+              <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  Tenemos consultas presenciales en Santiago (Providencia), Viña del Mar y Concepción.
+                  Además, atendemos por videollamada a todo Chile e incluso a chilenos en el extranjero.
+                  La experiencia online es igual de completa que la presencial.
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h3 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3" aria-expanded="false" aria-controls="faq3">
+                  ¿Me van a prohibir comer lo que me gusta?
+                </button>
+              </h3>
+              <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  Para nada. Nuestro enfoque no es restrictivo. Creemos en la alimentación consciente:
+                  aprender a disfrutar de todo — empanadas, asados, completos — pero con equilibrio
+                  y sin culpa. No prohibimos, enseñamos a elegir mejor.
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h3 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4" aria-expanded="false" aria-controls="faq4">
+                  ¿En cuánto tiempo veré resultados?
+                </button>
+              </h3>
+              <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  La mayoría de nuestros pacientes nota mejoras en energía y sueño desde la primera
+                  semana. Los cambios en peso y composición corporal suelen verse de forma sostenida
+                  a partir del primer mes. Recuerda que cada cuerpo es distinto y los resultados
+                  dependen de tu adherencia al plan.
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h3 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq5" aria-expanded="false" aria-controls="faq5">
+                  ¿Trabajan con Fonasa o Isapre?
+                </button>
+              </h3>
+              <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  Actualmente emitimos boletas que puedes presentar a tu Isapre para reembolso
+                  parcial, según tu plan de salud. También aceptamos pagos con tarjeta de crédito
+                  en hasta 3 cuotas sin interés.
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h3 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq6" aria-expanded="false" aria-controls="faq6">
+                  ¿Puedo cambiar o cancelar mi plan?
+                </button>
+              </h3>
+              <div id="faq6" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  Por supuesto. Puedes cambiar de plan en cualquier momento o cancelar con 7 días
+                  de anticipación. Sin multas, sin letra chica. Queremos que estés aquí porque
+                  quieres, no porque te obligamos.
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== CTA FINAL ==================== -->
+  <section class="cta-section" id="cta" aria-labelledby="cta-heading">
+    <div class="container position-relative" style="z-index: 2;">
+      <div class="reveal">
+        <h2 id="cta-heading">¿Lista/o para sentirte mejor?</h2>
+        <p>
+          Tu primera consulta es gratis, dura 30 minutos y es sin compromiso.
+          Conversemos sobre tus metas y veamos juntos cómo lograrlas.
+        </p>
+        <a href="https://wa.me/56912345678?text=Hola!%20Quiero%20agendar%20mi%20consulta%20gratuita%20en%20Nutre%20Bienestar" class="btn btn-organic btn-organic-secondary" target="_blank" rel="noopener">
+          <i class="bi bi-whatsapp"></i>
+          Agendar por WhatsApp
+          <span class="bounce-icon"><i class="bi bi-arrow-right-circle-fill"></i></span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="site-footer" id="footer">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-4">
+          <div class="footer-brand">
+            <span class="brand-icon"><i class="bi bi-leaf"></i></span>
+            Nutre Bienestar
+          </div>
+          <p style="font-size: .9rem; max-width: 300px;">
+            Nutrición personalizada y cercana en Chile.
+            Creemos que comer bien es un acto de amor propio,
+            no un castigo.
+          </p>
+          <div class="footer-social mt-3">
+            <a href="#" aria-label="Instagram de Nutre Bienestar"><i class="bi bi-instagram"></i></a>
+            <a href="#" aria-label="Facebook de Nutre Bienestar"><i class="bi bi-facebook"></i></a>
+            <a href="#" aria-label="TikTok de Nutre Bienestar"><i class="bi bi-tiktok"></i></a>
+            <a href="#" aria-label="YouTube de Nutre Bienestar"><i class="bi bi-youtube"></i></a>
+          </div>
+        </div>
+        <div class="col-6 col-lg-2">
+          <h5>Navegación</h5>
+          <a href="#beneficios" class="d-block">Beneficios</a>
+          <a href="#planes" class="d-block">Planes</a>
+          <a href="#como-funciona" class="d-block">Cómo funciona</a>
+          <a href="#testimonios" class="d-block">Testimonios</a>
+          <a href="#faq" class="d-block">Preguntas</a>
+        </div>
+        <div class="col-6 col-lg-3">
+          <h5>Contacto</h5>
+          <p style="font-size:.9rem; margin-bottom:.3rem;">
+            <i class="bi bi-geo-alt me-1"></i> Av. Providencia 1234, Of. 502<br>
+            Providencia, Santiago
+          </p>
+          <p style="font-size:.9rem; margin-bottom:.3rem;">
+            <i class="bi bi-telephone me-1"></i> <a href="tel:+56912345678">+56 9 1234 5678</a>
+          </p>
+          <p style="font-size:.9rem;">
+            <i class="bi bi-envelope me-1"></i> <a href="mailto:hola@nutrebienestar.cl">hola@nutrebienestar.cl</a>
+          </p>
+        </div>
+        <div class="col-lg-3">
+          <h5>Horario de atención</h5>
+          <p style="font-size:.9rem; margin-bottom:.3rem;">
+            <strong>Lunes a viernes:</strong> 9:00 – 19:00
+          </p>
+          <p style="font-size:.9rem; margin-bottom:.3rem;">
+            <strong>Sábado:</strong> 9:00 – 14:00
+          </p>
+          <p style="font-size:.9rem;">
+            <strong>Domingo:</strong> Cerrado
+          </p>
+        </div>
+      </div>
+      <div class="footer-bottom text-center">
+        <p class="mb-0">
+          © 2026 Nutre Bienestar. Todos los derechos reservados. · Sitio con fines demostrativos.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top -->
+  <button class="back-to-top" id="backToTop" aria-label="Volver al inicio" title="Volver al inicio">
+    <i class="bi bi-arrow-up"></i>
+  </button>
+
+  <!-- Bootstrap 5.3 JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+  <!-- Custom Scripts -->
+  <script src="script.js"></script>
+
+</body>
+</html>
