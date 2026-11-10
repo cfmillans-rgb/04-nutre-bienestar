@@ -286,6 +286,12 @@ a:hover { color: var(--durazno-dark); }
   margin-top: 2rem;
 }
 
+/* Sobre el video oscuro, el botón secundario va en blanco para que se lea. */
+.hero .btn-organic-outline {
+  color: var(--white);
+  border-color: rgba(255, 255, 255, 0.85);
+}
+
 /* Video pause button */
 .hero-video-toggle {
   position: absolute;
